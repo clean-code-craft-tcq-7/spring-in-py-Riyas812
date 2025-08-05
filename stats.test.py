@@ -12,9 +12,9 @@ class StatsTest(unittest.TestCase):
 
   def test_avg_is_nan_for_empty_input(self):
     computedStats = statistics.calculateStats([])
-    self.assertTrue(math.isnan(computedStats(["avg"]))
-    self.assertTrue(math.isnan(computedStats(["max"]))
-    self.assertTrue(math.isnan(computedStats(["min"]))
+    self.assertTrue(math.isnan(computedStats["avg"]))
+    self.assertTrue(math.isnan(computedStats["max"]))
+    self.assertTrue(math.isnan(computedStats["min"]))
 
   def test_avg_ignore_nan_in_input(self):
     computedStats = statistics.calculateStats([1.5, float('nan'), 3.2, 4.5])                              
@@ -25,9 +25,9 @@ class StatsTest(unittest.TestCase):
 
   def test_avg_nan_for_all_nan_input(self):
     computedStats = statistics.calculateStats([])
-    self.assertTrue(math.isnan(computedStats(["avg"]))
-    self.assertTrue(math.isnan(computedStats(["max"]))
-    self.assertTrue(math.isnan(computedStats(["min"]))
+    self.assertTrue(math.isnan(computedStats["avg"]))
+    self.assertTrue(math.isnan(computedStats["max"]))
+    self.assertTrue(math.isnan(computedStats["min"]))
            
 if __name__ == "__main__":
   unittest.main()
